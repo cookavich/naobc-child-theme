@@ -1,0 +1,245 @@
+#header_meta{
+  border-bottom: none !important;
+  background: transparent;
+  margin-top: -30px;
+
+  @media all and (max-width: 768px) {
+    display: none;
+  }
+
+  .phone-info {
+    color:color(primary);
+    font-weight: 100;
+    text-transform: uppercase;
+    position: absolute;
+    right: 50px;
+    top: 35px;
+  }
+}
+
+#header_main {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+#header_main.header--border {
+  box-shadow: 0 4px 4px -6px black;
+  transition: box-shadow 0.5s ease;
+}
+
+.logo {
+  a {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+    .alternate {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.responsive #top .logo {
+  @media all and (max-width: 767px){
+    width: auto;
+  }
+}
+
+
+.avia-menu.av_menu_icon_beside {
+  @media all and (max-width: 1125px) {
+    padding-right: 0;
+    margin-right: 8px;
+  }
+
+  @media all and (max-width: 1005px) {
+    margin-top: 0;
+  }
+}
+
+.main_menu {
+  .menu-item {
+    .avia-menu-text {
+      color: color(primary);
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .avia-menu-fx {
+      background-color: color(secondary);
+      border-color: color(secondary);
+      bottom: 35% !important;
+      width: 86% !important;
+      left: 7% !important;
+    }
+  }
+
+  .av-main-nav > li > a {
+    @media all and (max-width: 1125px) {
+      padding: 0 8px;
+    }
+  }
+
+  .menu-item-has-children {
+    .sub-menu {
+      background: color(secondary);
+      border-top: none !important;
+      margin-top: -24px;
+      li a {
+        background: color(secondary) !important;
+        color: white !important;
+        border: none !important;
+
+        .avia-menu-text {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .social_bookmarks {
+    @media all and (max-width: 1005px) {
+      position: absolute;
+      top: 75%;
+      margin-top: -10px;
+    }
+
+    a {
+      color: color(primary);
+    }
+  }
+}
+
+.avia-menu.av_menu_icon_beside {
+  border-right: none;
+}
+
+.av_header_transparency {
+  #header_meta {
+    .phone-info {
+      span {
+        color: white;
+      }
+    }
+  }
+  .main_menu li .avia-menu-text {
+    color: white;
+  }
+
+  .social_bookmarks a {
+    color: white !important;
+  }
+  #advanced_menu_toggle,
+  #advanced_menu_hide {
+    color: white !important;
+    border: none;
+    &:hover {
+      background-color: white !important;
+      color: color(primary) !important;
+    }
+  }
+
+}
+
+
+#advanced_menu_toggle,
+#advanced_menu_hide {
+  color: color(primary) !important;
+  border: none;
+  &:hover {
+    background-color: color(primary) !important;
+    color: white !important;
+  }
+}
+
+
+.av_header_transparency {
+  .header--mobile-info {
+    color: white;
+  }
+}
+
+.header--mobile-info {
+  color: color(primary);
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 11px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 125%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media all and (min-width: 768px) {
+    display: none;
+  }
+
+  p {
+    span {
+      display: block;
+      text-align: center;
+      height: 16px;
+
+      &:nth-child(3) {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+/* ==================================
+Styles for the transparent header to remain transparent
+on mobile screens.
+================================== */
+@media only screen and (max-width: 767px) {
+  #top #wrap_all .av_header_transparency,
+  .av_header_transparency #advanced_menu_toggle,
+  .html_header_transparency #top #header,
+  .header_color .header_bg {
+    background: transparent!important;
+    position: absolute!important;
+  }
+
+  .html_header_transparency .logo {
+    .logo a > img {
+      opacity: 0 !important;
+    }
+    img.alternate {
+      opacity: 1 !important;
+    }
+  }
+
+  .responsive #top {
+    .av_header_transparency.av_alternate_logo_active .logo a > img {
+      opacity: 0 !important;
+    }
+    .av_header_transparency .logo img.alternate {
+      display: inherit !important;
+    }
+
+    .slideshow_caption {
+      h2 {
+        font-size: 33px !important;
+      }
+      .avia-caption-content {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .responsive #top .slideshow_caption {
+    h2 {
+      font-size: 28px !important;
+    }
+    .avia-caption-content {
+      font-size: 18px !important;
+    }
+  }
+}

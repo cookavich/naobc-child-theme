@@ -1,0 +1,33 @@
+.header-hero {
+  .avia-caption-title {
+    font-size: 48px;
+    text-transform: none;
+  }
+
+  .avia-caption-content {
+    font-size: 28px;
+  }
+
+  @media all and (max-width: 990px) {
+    .avia-caption-title {
+      font-size: 38px;
+    }
+
+    .avia-caption-content {
+      font-size: 22px;
+    }
+  }
+}
+
+
+#top .header-hero {
+  .avia-slideshow-button {
+    @extend .button--primary;
+  }
+}
+
+.html_header_transparency #top .avia-builder-el-0 .slideshow_caption {
+ @media all and (max-width: 525px) {
+    padding-top: 80px;
+  }
+}

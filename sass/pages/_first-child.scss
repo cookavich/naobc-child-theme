@@ -1,0 +1,43 @@
+.page .column-top-margin {
+  margin-top: 0;
+}
+
+.av-special-heading-tag {
+  color: black !important;
+  font-size: 36px !important;
+  font-weight: 600 !important;
+}
+
+
+.content--heading {
+  p {
+    font-size: 18px;
+    color: color(primary);
+    font-weight: 100;
+  }
+}
+
+.left-column--child-pages {
+  padding-top: $spacing-unit * 2;
+}
+
+.menu--child-pages {
+  background-color: #f7f7f7;
+  padding-top: $spacing-unit * 2;
+
+  .widgettitle {
+    color: black;
+    font-size: 18px;
+    padding-left: $spacing-unit;
+  }
+
+  .menu-item a {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: $spacing-unit !important;
+
+    &:hover {
+      color: color(secondary);
+    }
+  }
+}

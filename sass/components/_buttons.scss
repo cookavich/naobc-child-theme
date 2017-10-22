@@ -1,0 +1,33 @@
+.button--primary {
+  background: white;
+  color: color(primary);
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: ($spacing-unit) ($spacing-unit * 5);
+  border: white 3px solid;
+  border-radius: 0;
+
+  &:hover {
+    background: color(primary);
+    color: white;
+  }
+}
+
+.button--avia .avia-button {
+  background: white !important;
+  color: color(primary) !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  padding: ($spacing-unit) ($spacing-unit * 5) !important;
+  border: white 3px solid !important;
+  border-radius: 0 !important;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: color(primary) !important;
+    color: white !important;
+  }
+}

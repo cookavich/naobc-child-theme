@@ -1,0 +1,32 @@
+// Modules
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/functions";
+
+// Components
+@import "components/typography";
+@import "components/buttons";
+@import "components/pipe";
+
+// Partials
+@import "partials/header";
+@import "partials/breadcrumb";
+@import "partials/hero";
+@import "partials/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/blog";
+@import "pages/first-child";
+
+/* ============================================
+Base Styles Below
+============================================ */
+
+#main .main_color {
+  border: none;
+}
+
+.content {
+  padding-top: 0;
+}

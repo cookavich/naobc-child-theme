@@ -1,0 +1,14 @@
+.section--community {
+  h3, p {
+    color: white !important;
+  }
+}
+
+.section--map {
+  a {
+    color: #478dee;
+    &:hover {
+      color: #478dee;
+    }
+  }
+}
