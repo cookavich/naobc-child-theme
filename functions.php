@@ -1,6 +1,7 @@
 <?php
 
 require_once 'lib/shortcodes.php';
+require_once 'lib/PodcastGrid.php';
 
 /**
  * Adds custom class field to enfold page builder
