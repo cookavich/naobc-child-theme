@@ -3,6 +3,33 @@
 global $post;
 global $wp_query;
 ?>
+
+<section class="story-nav">
+    <div class="filter-options">
+        <form action="">
+            <div class="select-container">
+                <?php wp_dropdown_categories([
+                    'show_option_none' => 'Select Series',
+                    'taxonomy' => 'series',
+                ]); ?>
+                <script type="text/javascript">
+                    const dropdown = document.getElementById("cat");
+                    function onCatChange() {
+                        const currentSelection = dropdown.options[dropdown.selectedIndex].value;
+                        if (currentSelection > 0) {
+                            location.href = "<?php echo esc_url(home_url('/')); ?>?cat=" + currentSelection;
+                        }
+                    }
+                    dropdown.onchange = onCatChange;
+                </script>
+            </div>
+        </form>
+    </div>
+    <div class="filter-reset">
+        <a href="<?php echo esc_url(home_url('/')); ?>podcast">See all Sermons</a>
+    </div>
+</section>
+
 <div class="grid">
     <?php foreach ($podcasts as $post): ?>
         <?php $taxonomies = get_the_taxonomies(); ?>
