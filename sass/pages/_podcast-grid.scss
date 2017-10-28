@@ -1,31 +1,55 @@
 .grid {
   display: grid;
   grid-gap: 1rem 2.43902439%;
-  grid-template-columns: repeat(1,1fr);
-
-  @media screen and (min-width: 1000px) {
-    grid-template-columns: repeat(3,1fr);
-  }
+  grid-template-columns: repeat(1, 1fr);
 
   @media screen and (min-width: 767px) {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
 .card-podcast {
-  display:flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin-bottom: 24px;
+  border-top: 5px solid;
+  border-top-color: #024b72 !important;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   header {
     display: block;
+    padding: 0 8px;
   }
 
   .card-body {
+    margin: 16px 0;
     display: block;
+    padding: 0 8px;
   }
 
   footer {
     display: block;
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+
+    .listen-to {
+      display: block;
+      padding: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      height: 100%;
+      width: 100%;
+
+      &:hover {
+        text-decoration: none;
+        color: white;
+        background-color: #024b72;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
   }
 }
 
