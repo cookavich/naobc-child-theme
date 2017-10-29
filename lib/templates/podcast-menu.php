@@ -39,7 +39,7 @@
                         var seriesDropdown = document.getElementById('series-dropdown');
                         function onSeriesCatChange() {
                             var currentSelection = seriesDropdown.options[seriesDropdown.selectedIndex].value;
-                            if (currentSelection > 0) {
+                            if (currentSelection.length > 0) {
                                 location.href = "<?php echo esc_url(home_url('/')); ?>series/" + currentSelection;
                             }
                         }
