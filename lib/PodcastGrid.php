@@ -3,7 +3,8 @@
 class PodcastGrid
 {
 
-    private function __construct() {
+    private function __construct()
+    {
 
     }
 
@@ -23,37 +24,48 @@ class PodcastGrid
     private function podcasts()
     {
         if (is_archive())
-            return $this->bySeries($this->getCategory());
+            return $this->byTaxonomy($this->getTerm());
 
         return $this->getPodcasts();
     }
 
 
-    private function bySeries($series)
+    function byTaxonomy(WP_Term $wpTerm)
     {
-        return $this->bySeries($series);
-    }
-
-    private function bySpeaker()
-    {
-
-    }
-
-    private function getPodcasts($series = '') {
         return get_posts([
             'orderby' => 'date',
             'order' => 'DESC',
-            'category_name' => $series,
+            'category_name' => '',
             'post_type' => 'podcast',
             'post_status' => 'publish',
             'numberposts' => 15,
+            'tax_query' => [
+                [
+                    'taxonomy' => $wpTerm->taxonomy,
+                    'field' => 'slug',
+                    'terms' => $wpTerm->slug
+                ]
+            ]
         ]);
     }
 
-    private function getCategory()
+    private function getPodcasts()
     {
-        return get_queried_object()->category_nicename;
+        return get_posts([
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'category_name' => '',
+            'post_type' => 'podcast',
+            'post_status' => 'publish',
+            'numberposts' => 15,
+
+        ]);
+    }
+
+    private function getTerm()
+    {
+        return get_queried_object();
     }
 }
 
-add_shortcode( 'podcast_grid', ['PodcastGrid', 'getGrid']);
+add_shortcode('podcast_grid', ['PodcastGrid', 'getGrid']);

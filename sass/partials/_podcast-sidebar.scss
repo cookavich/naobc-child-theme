@@ -1,0 +1,43 @@
+.template-blog.podcast {
+  @media all and (min-width:1200px){
+    display: flex;
+
+    .podcast-sidebar {
+      order: 2;
+      width: 35%;
+    }
+
+    main {
+      order: 1;
+      width: 65%;
+    }
+  }
+
+  @media all and (max-width: 1199px) {
+    .podcast-sidebar {
+      margin-top: 16px;
+    }
+  }
+
+
+  @media all and (max-width: 1199px) and (min-width: 767px) {
+    .podcast-sidebar {
+      display: flex;
+      .story-nav {
+        margin-right: 16px;
+        width: 40%;
+      }
+
+      .filter-reset {
+        margin-left: auto;
+      }
+    }
+  }
+  
+  @media all and (max-width: 940px) and (min-width: 767px) {
+    .podcast-sidebar .story-nav {
+      width: 30%;
+    }
+  }
+}
+

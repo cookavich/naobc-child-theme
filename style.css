@@ -446,6 +446,41 @@ on mobile screens.
         #socket .copyright .container--socket .desktop-hidden:nth-of-type(3) {
           margin-top: 0; }
 
+@media all and (min-width: 1200px) {
+  .template-blog.podcast {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .template-blog.podcast .podcast-sidebar {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      width: 35%; }
+    .template-blog.podcast main {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      width: 65%; } }
+
+@media all and (max-width: 1199px) {
+  .template-blog.podcast .podcast-sidebar {
+    margin-top: 16px; } }
+
+@media all and (max-width: 1199px) and (min-width: 767px) {
+  .template-blog.podcast .podcast-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .template-blog.podcast .podcast-sidebar .story-nav {
+      margin-right: 16px;
+      width: 40%; }
+    .template-blog.podcast .podcast-sidebar .filter-reset {
+      margin-left: auto; } }
+
+@media all and (max-width: 940px) and (min-width: 767px) {
+  .template-blog.podcast .podcast-sidebar .story-nav {
+    width: 30%; } }
+
 .section--community h3, .section--community p {
   color: white !important; }
 
