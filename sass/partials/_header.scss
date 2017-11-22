@@ -47,7 +47,7 @@
 
 
 .avia-menu.av_menu_icon_beside {
-  @media all and (max-width: 1125px) {
+  @media all and (max-width: 1230px) {
     padding-right: 0;
     margin-right: 8px;
   }
@@ -75,7 +75,7 @@
   }
 
   .av-main-nav > li > a {
-    @media all and (max-width: 1125px) {
+    @media all and (max-width: 1165px) {
       padding: 0 8px;
     }
   }
@@ -129,27 +129,21 @@
   .social_bookmarks a {
     color: white !important;
   }
+
+  // fix for the enfold bug where they changed the structure of the mobile menu,
+  // but didn't remove the old mobile menu toggle/hide buttons
   #advanced_menu_toggle,
   #advanced_menu_hide {
-    color: white !important;
-    border: none;
-    &:hover {
-      background-color: white !important;
-      color: color(primary) !important;
-    }
+    display: none;
   }
 
 }
 
-
+// fix for the enfold bug where they changed the structure of the mobile menu,
+// but didn't remove the old mobile menu toggle/hide buttons
 #advanced_menu_toggle,
 #advanced_menu_hide {
-  color: color(primary) !important;
-  border: none;
-  &:hover {
-    background-color: color(primary) !important;
-    color: white !important;
-  }
+  display: none;
 }
 
 
@@ -160,7 +154,7 @@
 }
 
 .header--mobile-info {
-  color: color(primary);
+  color: white;
   font-weight: 100;
   text-transform: uppercase;
   font-size: 11px;

@@ -83,7 +83,7 @@ Theme URI: www.kriesi.at/themes/enfold/
   .responsive #top .logo {
     width: auto; } }
 
-@media all and (max-width: 1125px) {
+@media all and (max-width: 1230px) {
   .avia-menu.av_menu_icon_beside {
     padding-right: 0;
     margin-right: 8px; } }
@@ -104,7 +104,7 @@ Theme URI: www.kriesi.at/themes/enfold/
   width: 86% !important;
   left: 7% !important; }
 
-@media all and (max-width: 1125px) {
+@media all and (max-width: 1165px) {
   .main_menu .av-main-nav > li > a {
     padding: 0 8px; } }
 
@@ -142,27 +142,17 @@ Theme URI: www.kriesi.at/themes/enfold/
 
 .av_header_transparency #advanced_menu_toggle,
 .av_header_transparency #advanced_menu_hide {
-  color: white !important;
-  border: none; }
-  .av_header_transparency #advanced_menu_toggle:hover,
-  .av_header_transparency #advanced_menu_hide:hover {
-    background-color: white !important;
-    color: #024b72 !important; }
+  display: none; }
 
 #advanced_menu_toggle,
 #advanced_menu_hide {
-  color: #024b72 !important;
-  border: none; }
-  #advanced_menu_toggle:hover,
-  #advanced_menu_hide:hover {
-    background-color: #024b72 !important;
-    color: white !important; }
+  display: none; }
 
 .av_header_transparency .header--mobile-info {
   color: white; }
 
 .header--mobile-info {
-  color: #024b72;
+  color: white;
   font-weight: 100;
   text-transform: uppercase;
   font-size: 11px;
@@ -480,6 +470,37 @@ on mobile screens.
 @media all and (max-width: 940px) and (min-width: 767px) {
   .template-blog.podcast .podcast-sidebar .story-nav {
     width: 30%; } }
+
+.av_header_transparency .av-hamburger-inner,
+.av_header_transparency .av-hamburger-inner::before,
+.av_header_transparency .av-hamburger-inner::after {
+  background-color: white !important; }
+
+.av-hamburger-inner,
+.av-hamburger-inner::before,
+.av-hamburger-inner::after {
+  background-color: #024b72 !important; }
+
+.is-active .av-hamburger-box .av-hamburger-inner,
+.is-active .av-hamburger-box .av-hamburger-inner::before,
+.is-active .av-hamburger-box .av-hamburger-inner::after {
+  background-color: #024b72 !important; }
+
+.html_av-overlay-side #top .av-burger-overlay-scroll {
+  background: white; }
+
+.html_av-overlay-side #top #wrap_all div .av-burger-overlay-scroll #av-burger-menu-ul a .avia-menu-text {
+  color: #024b72; }
+
+@media all and (max-width: 990px) {
+  #header_meta {
+    margin-bottom: 16px; } }
+
+@media only screen and (max-width: 1090px) and (min-width: 768px) {
+  .responsive #top .av_mobile_menu_tablet .av-main-nav .menu-item-avia-special {
+    display: block; }
+  .responsive #top .av_mobile_menu_tablet .av-main-nav .menu-item {
+    display: none; } }
 
 .section--community h3, .section--community p {
   color: white !important; }
