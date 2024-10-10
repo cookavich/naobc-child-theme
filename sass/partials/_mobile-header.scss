@@ -1,0 +1,46 @@
+.av_header_transparency {
+  .av-hamburger-inner,
+  .av-hamburger-inner::before,
+  .av-hamburger-inner::after {
+    background-color: white !important;
+  }
+}
+
+.av-hamburger-inner,
+.av-hamburger-inner::before,
+.av-hamburger-inner::after {
+  background-color: color(primary) !important;
+}
+
+.is-active .av-hamburger-box .av-hamburger-inner,
+.is-active .av-hamburger-box .av-hamburger-inner::before,
+.is-active .av-hamburger-box .av-hamburger-inner::after {
+  background-color: color(primary) !important;
+}
+
+.html_av-overlay-side #top .av-burger-overlay-scroll {
+  background: white;
+}
+
+.html_av-overlay-side #top #wrap_all div .av-burger-overlay-scroll #av-burger-menu-ul {
+  a {
+    .avia-menu-text {
+      color: color(primary);
+    }
+  }
+}
+
+@media all and (max-width: 990px) {
+  #header_meta {
+    margin-bottom: $spacing-unit * 2;
+  }
+}
+
+@media only screen and (max-width: 1090px) and (min-width: 768px) {
+  .responsive #top .av_mobile_menu_tablet .av-main-nav .menu-item-avia-special {
+    display: block;
+  }
+  .responsive #top .av_mobile_menu_tablet .av-main-nav .menu-item {
+    display: none;
+  }
+}
