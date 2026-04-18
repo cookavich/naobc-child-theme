@@ -196,7 +196,7 @@ if($headerS['header_topbar'] == true)
 							$output .= "<p>";
 								$output .= "<span>4401 BRECKENRIDGE LANE,</span>";
 								$output .= "<span>LOUISVILLE, KENTUCKY 40218</span>";
-								$output .= "<span>SERVICES EVERY SUNDAY AT 9:00 AND 10:30AM</span>";
+								$output .= "<span>SERVICES EVERY SUNDAY AT 9:00, 10:30 AND 12:00</span>";
 							$output .= "</p>";
 						$output .= "</div>";
 					/* inner-container */
