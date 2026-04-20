@@ -52,7 +52,10 @@
 							$class2 = ""; // initialized to avoid php notices
 							if($i != 1) $class2 = " el_after_{$class}  el_before_{$class}";
 							echo "<div class='flex_column {$class} {$class2} {$firstCol}'>";
-							if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer - column'.$i) ) : else : avia_dummy_widget($i); endif;
+							$current_footer_sidebar = 'Footer - Column ' . $i;
+							$legacy_footer_sidebar = 'Footer - column' . $i;
+							$has_footer_widget = function_exists('dynamic_sidebar') && ( dynamic_sidebar($current_footer_sidebar) || dynamic_sidebar($legacy_footer_sidebar) );
+							if ( $has_footer_widget ) : else : avia_dummy_widget($i); endif;
 							echo "</div>";
 							$firstCol = "";
 						}

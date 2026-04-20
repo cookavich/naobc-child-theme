@@ -79,7 +79,7 @@ function avia_title($args = false, $id = false)
     $markup = avia_markup_helper(array('context' => 'avia_title','echo'=>false));
     if(!empty($link) && !empty($title)) $title = "<a href='".$link."' rel='bookmark' title='".__('Permanent Link:','avia_framework')." ".esc_attr( $title )."' $markup>".$title."</a>";
     if(!empty($subtitle)) $additions .= "<div class='title_meta meta-color'>".wpautop($subtitle)."</div>";
-    if($breadcrumb) $additions .= avia_breadcrumbs(array('separator' => '>', 'richsnippet' => true));
+    if($breadcrumb) $additions .= Avia_Breadcrumb_Trail()->get_trail(array('separator' => '>', 'richsnippet' => true));
 
 
     $html = str_replace('{class}', $class, $html);
